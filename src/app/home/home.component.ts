@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewChild, AfterViewInit, ElementRef, OnInit } from '@angular/core';
 import { trigger, style, transition, animate, keyframes, query, stagger } from '@angular/animations';
 @Component({
   selector: 'app-home',
@@ -51,5 +51,6 @@ export class HomeComponent implements OnInit {
 
   removeItem(i) {
     this.goals.splice(i, 1);
+    this.itemCount = this.goals.length;
   }
 }
